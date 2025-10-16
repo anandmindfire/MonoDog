@@ -54,7 +54,7 @@ A comprehensive, self-hosted monorepo package manager dashboard that provides vi
 ## 🏗️ Architecture
 
 ```
-monovisor/
+monodog/
 ├── apps/
 │   └── dashboard/          # React frontend dashboard
 ├── packages/
@@ -88,7 +88,7 @@ pnpm install
 cp .env.example .env
 
 # Configure your database
-DATABASE_URL="postgresql://user:password@localhost:5432/monovisor"
+DATABASE_URL="sql://user:password@localhost:5432/monovisor"
 # or for SQLite: DATABASE_URL="file:./dev.db"
 ```
 
@@ -110,8 +110,8 @@ pnpm db:migrate
 pnpm dev
 
 # Or start individually:
-pnpm --filter @monovisor/dashboard dev    # Frontend (http://localhost:5173)
-pnpm --filter @monovisor/backend dev     # Backend (http://localhost:4000)
+pnpm --filter @monodog/dashboard dev    # Frontend (http://localhost:5173)
+pnpm --filter @monodog/backend dev     # Backend (http://localhost:4000)
 ```
 
 ### 5. Access Dashboard
@@ -192,12 +192,12 @@ docker-compose logs -f
 ### Custom Docker Setup
 ```bash
 # Build images
-docker build -t monovisor-dashboard ./apps/dashboard
-docker build -t monovisor-backend ./packages/backend
+docker build -t monodog-dashboard ./apps/dashboard
+docker build -t monodog-backend ./packages/backend
 
 # Run containers
-docker run -p 5173:5173 monovisor-dashboard
-docker run -p 4000:4000 monovisor-backend
+docker run -p 5173:5173 monodog-dashboard
+docker run -p 4000:4000 monodog-backend
 ```
 
 ## 🔍 Monitoring & Health Checks
@@ -220,8 +220,8 @@ docker run -p 4000:4000 monovisor-backend
 pnpm test
 
 # Specific package tests
-pnpm --filter @monovisor/backend test
-pnpm --filter @monovisor/dashboard test
+pnpm --filter @monodog/backend test
+pnpm --filter @monodog/dashboard test
 
 # Test with coverage
 pnpm test --coverage
@@ -291,10 +291,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-org/monovisor/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-org/monovisor/discussions)
-- **Documentation**: [Wiki](https://github.com/your-org/monovisor/wiki)
+- **Issues**: [GitHub Issues](https://github.com/your-org/monodog/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/your-org/monodog/discussions)
+- **Documentation**: [Wiki](https://github.com/your-org/monodog/wiki)
 
 ---
 
-**Monovisor** - Making monorepo management simple, visual, and powerful! 🎯
+**Monodog** - Making monorepo management simple, visual, and powerful! 🎯
