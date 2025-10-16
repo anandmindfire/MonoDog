@@ -1,4 +1,4 @@
-# Monovisor 🚀
+# MonoDog 🚀
 
 A comprehensive, self-hosted monorepo package manager dashboard that provides visual management and monitoring of packages using tools like pnpm, turbo, or Nx.
 
