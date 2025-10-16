@@ -1,5 +1,5 @@
 {
-  "name": "@monovisor/ci-status",
+  "name": "@monodog/ci-status",
   "version": "1.0.0",
   "description": "CI/CD status manager for monorepo packages",
   "main": "index.ts",
@@ -20,6 +20,6 @@
     "prisma": "^5.7.0"
   },
   "peerDependencies": {
-    "@monovisor/utils": "workspace:*"
+    "@monodog/utils": "workspace:*"
   }
 }

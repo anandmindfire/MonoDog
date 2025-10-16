@@ -1,5 +1,5 @@
 {
-  "name": "@monovisor/monorepo-scanner",
+  "name": "@monodog/monorepo-scanner",
   "version": "1.0.0",
   "description": "Monorepo scanner for analyzing packages, dependencies, and health",
   "main": "index.ts",
@@ -20,6 +20,6 @@
     "prisma": "^5.7.0"
   },
   "peerDependencies": {
-    "@monovisor/utils": "workspace:*"
+    "@monodog/utils": "workspace:*"
   }
 }

@@ -93,7 +93,7 @@ export default function Dashboard() {
 
   // Load configuration from localStorage or environment
   useEffect(() => {
-    const savedConfig = localStorage.getItem('monovisor-config');
+    const savedConfig = localStorage.getItem('monodog-config');
     if (savedConfig) {
       setConfig({ ...defaultConfig, ...JSON.parse(savedConfig) });
     }
@@ -102,7 +102,7 @@ export default function Dashboard() {
   // Save configuration to localStorage
   const handleConfigSave = (newConfig: DashboardConfig) => {
     setConfig(newConfig);
-    localStorage.setItem('monovisor-config', JSON.stringify(newConfig));
+    localStorage.setItem('monodog-config', JSON.stringify(newConfig));
   };
 
   // Handle refresh action

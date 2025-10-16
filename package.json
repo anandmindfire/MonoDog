@@ -1,5 +1,5 @@
 {
-  "name": "monovisor",
+  "name": "monodog",
   "version": "1.0.0",
   "description": "A self-hosted monorepo package manager dashboard",
   "private": true,

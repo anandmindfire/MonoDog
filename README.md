@@ -78,7 +78,7 @@ monodog/
 ### 1. Clone and Install
 ```bash
 git clone <your-repo-url>
-cd monovisor
+cd monodog
 pnpm install
 ```
 
@@ -88,7 +88,7 @@ pnpm install
 cp .env.example .env
 
 # Configure your database
-DATABASE_URL="sql://user:password@localhost:5432/monovisor"
+DATABASE_URL="sql://user:password@localhost:5432/monodog"
 # or for SQLite: DATABASE_URL="file:./dev.db"
 ```
 
@@ -241,7 +241,7 @@ pnpm test --coverage
 ```env
 NODE_ENV=production
 PORT=4000
-DATABASE_URL=postgresql://user:pass@host:5432/monovisor
+DATABASE_URL=postgresql://user:pass@host:5432/monodog
 JWT_SECRET=your_jwt_secret
 CORS_ORIGIN=https://yourdomain.com
 ```

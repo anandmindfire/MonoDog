@@ -1,6 +1,6 @@
 # Theme Migration Guide
 
-This guide helps you migrate existing components to use the new Monovisor theme system.
+This guide helps you migrate existing components to use the new monodog theme system.
 
 ## Quick Reference
 

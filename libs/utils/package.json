@@ -1,7 +1,7 @@
 {
-  "name": "@monovisor/utils",
+  "name": "@monodog/utils",
   "version": "1.0.0",
-  "description": "Shared utility functions for Monovisor monorepo dashboard",
+  "description": "Shared utility functions for monodog monorepo dashboard",
   "main": "helpers.ts",
   "scripts": {
     "build": "tsc",

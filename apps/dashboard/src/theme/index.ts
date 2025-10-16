@@ -1,4 +1,4 @@
-// Theme configuration and utilities for the Monovisor dashboard
+// Theme configuration and utilities for the monodog dashboard
 
 /**
  * Brand Colors

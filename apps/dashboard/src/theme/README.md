@@ -1,6 +1,6 @@
-# Monovisor Dashboard Theme System
+# monodog Dashboard Theme System
 
-This document outlines the comprehensive theme system implemented for the Monovisor dashboard application.
+This document outlines the comprehensive theme system implemented for the monodog dashboard application.
 
 ## Overview
 
@@ -213,4 +213,4 @@ To migrate existing components:
 </div>
 ```
 
-This theme system ensures consistency, maintainability, and a professional appearance across the entire Monovisor dashboard application.
+This theme system ensures consistency, maintainability, and a professional appearance across the entire monodog dashboard application.

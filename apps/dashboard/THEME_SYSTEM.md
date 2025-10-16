@@ -1,6 +1,6 @@
-# 🎨 Monovisor Dashboard Theme System
+# 🎨 monodog Dashboard Theme System
 
-A comprehensive design system implementation for the Monovisor monorepo package manager dashboard.
+A comprehensive design system implementation for the monodog monorepo package manager dashboard.
 
 ## 📋 Overview
 
@@ -276,6 +276,6 @@ All components are designed mobile-first with progressive enhancement for larger
 
 ---
 
-The Monovisor theme system represents a significant step forward in creating a professional, maintainable, and scalable design system for the dashboard application. It provides the foundation for consistent user experiences while enabling rapid development and easy maintenance.
+The monodog theme system represents a significant step forward in creating a professional, maintainable, and scalable design system for the dashboard application. It provides the foundation for consistent user experiences while enabling rapid development and easy maintenance.
 
 For implementation details, see the migration guide and examples in the `src/theme/` directory.

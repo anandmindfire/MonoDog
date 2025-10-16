@@ -1,7 +1,7 @@
 {
-  "name": "@monovisor/dashboard",
+  "name": "@monodog/dashboard",
   "version": "1.0.0",
-  "description": "React dashboard for Monovisor monorepo management",
+  "description": "React dashboard for monodog monorepo management",
   "type": "module",
   "scripts": {
     "dev": "vite",

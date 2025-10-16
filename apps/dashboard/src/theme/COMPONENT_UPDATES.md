@@ -260,4 +260,4 @@ For each component update, verify:
 
 ---
 
-This migration represents a significant improvement in maintainability and consistency across the entire Monovisor dashboard application.
+This migration represents a significant improvement in maintainability and consistency across the entire monodog dashboard application.

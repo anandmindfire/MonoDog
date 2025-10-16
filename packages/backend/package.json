@@ -1,7 +1,7 @@
 {
-  "name": "@monovisor/backend",
+  "name": "@monodog/backend",
   "version": "1.0.0",
-  "description": "Backend API server for Monovisor monorepo dashboard",
+  "description": "Backend API server for monodog monorepo dashboard",
   "main": "index.ts",
   "scripts": {
     "dev": "tsx watch index.ts",
@@ -25,8 +25,8 @@
     "prisma": "^5.7.0"
   },
   "peerDependencies": {
-    "@monovisor/utils": "workspace:*",
-    "@monovisor/monorepo-scanner": "workspace:*",
-    "@monovisor/ci-status": "workspace:*"
+    "@monodog/utils": "workspace:*",
+    "@monodog/monorepo-scanner": "workspace:*",
+    "@monodog/ci-status": "workspace:*"
   }
 }

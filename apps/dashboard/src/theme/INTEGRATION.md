@@ -1,6 +1,6 @@
 # Theme Integration with Tailwind CSS
 
-This document explains how the Monovisor theme system is integrated with Tailwind CSS through centralized configuration.
+This document explains how the monodog theme system is integrated with Tailwind CSS through centralized configuration.
 
 ## Architecture Overview
 
@@ -335,4 +335,4 @@ export const theme = {
 } as const;
 ```
 
-This centralized theme architecture provides a robust foundation for maintaining design consistency while enabling flexibility and growth for the Monovisor dashboard system.
+This centralized theme architecture provides a robust foundation for maintaining design consistency while enabling flexibility and growth for the monodog dashboard system.

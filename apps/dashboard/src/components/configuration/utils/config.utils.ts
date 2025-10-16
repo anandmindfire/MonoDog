@@ -10,7 +10,7 @@ export const getTabDefinitions = (): TabDefinition[] => [
 
 // Get default configuration
 export const getDefaultConfig = (): DashboardConfig => ({
-  title: 'Monovisor Dashboard',
+  title: 'monodog Dashboard',
   description: 'Visual management of our monorepo packages',
   packageTypes: ['app', 'lib', 'tool', 'service'],
   customFields: ['team', 'priority', 'environment'],

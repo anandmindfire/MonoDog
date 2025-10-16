@@ -1,6 +1,6 @@
-# 🚀 Self-Hosting Monovisor Dashboard
+# 🚀 Self-Hosting monodog Dashboard
 
-Monovisor is designed to be easily self-hosted in any monorepo setup. This guide will walk you through the complete setup process.
+monodog is designed to be easily self-hosted in any monorepo setup. This guide will walk you through the complete setup process.
 
 ## 📋 Prerequisites
 
@@ -15,8 +15,8 @@ Monovisor is designed to be easily self-hosted in any monorepo setup. This guide
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/monovisor.git
-cd monovisor
+git clone https://github.com/your-username/monodog.git
+cd monodog
 
 # Install dependencies
 pnpm install
@@ -38,7 +38,7 @@ nano .env
 **Required Environment Variables:**
 ```env
 # Database
-DATABASE_URL="sql://username:password@localhost:5432/monovisor"
+DATABASE_URL="sql://username:password@localhost:5432/monodog"
 
 # Dashboard
 DASHBOARD_PORT=3000
@@ -53,7 +53,7 @@ BACKEND_HOST=localhost
 
 ```bash
 # Create database (PostgreSQL)
-createdb monovisor
+createdb monodog
 
 # Run migrations
 pnpm db:migrate
@@ -69,8 +69,8 @@ pnpm db:push
 pnpm dev
 
 # Or start individually
-pnpm --filter @monovisor/dashboard dev    # Frontend (port 3000)
-pnpm --filter @monovisor/backend dev      # Backend API (port 3001)
+pnpm --filter @monodog/dashboard dev    # Frontend (port 3000)
+pnpm --filter @monodog/backend dev      # Backend API (port 3001)
 ```
 
 ## 🔧 Configuration
@@ -103,7 +103,7 @@ The dashboard is highly configurable through the UI:
 
 ### Monorepo Structure Detection
 
-Monovisor automatically detects common monorepo structures:
+monodog automatically detects common monorepo structures:
 
 ```
 Standard Structure:
@@ -237,8 +237,8 @@ services:
   postgres:
     image: postgres:15
     environment:
-      POSTGRES_DB: monovisor
-      POSTGRES_USER: monovisor
+      POSTGRES_DB: monodog
+      POSTGRES_USER: monodog
       POSTGRES_PASSWORD: password
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -252,7 +252,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=postgresql://monovisor:password@postgres:5432/monovisor
+      - DATABASE_URL=postgresql://monodog:password@postgres:5432/monodog
     depends_on:
       - postgres
 
@@ -263,7 +263,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      - DATABASE_URL=postgresql://monovisor:password@postgres:5432/monovisor
+      - DATABASE_URL=postgresql://monodog:password@postgres:5432/monodog
     depends_on:
       - postgres
 
@@ -294,13 +294,13 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Build dashboard
-RUN pnpm --filter @monovisor/dashboard build
+RUN pnpm --filter @monodog/dashboard build
 
 # Expose port
 EXPOSE 3000
 
 # Start dashboard
-CMD ["pnpm", "--filter", "@monovisor/dashboard", "start"]
+CMD ["pnpm", "--filter", "@monodog/dashboard", "start"]
 ```
 
 ## 🔒 Security Considerations
@@ -340,19 +340,19 @@ pnpm db:studio
 ### Logs
 ```bash
 # Dashboard logs
-pnpm --filter @monovisor/dashboard logs
+pnpm --filter @monodog/dashboard logs
 
 # Backend logs
-pnpm --filter @monovisor/backend logs
+pnpm --filter @monodog/backend logs
 
 # Database logs
-docker logs monovisor_postgres_1
+docker logs monodog_postgres_1
 ```
 
 ### Backup
 ```bash
 # Database backup
-pg_dump monovisor > backup_$(date +%Y%m%d).sql
+pg_dump monodog > backup_$(date +%Y%m%d).sql
 
 # Configuration backup
 cp .env .env.backup
@@ -370,7 +370,7 @@ pnpm build
 ```bash
 # Production environment
 NODE_ENV=production
-DATABASE_URL="postgresql://user:pass@prod-db:5432/monovisor"
+DATABASE_URL="postgresql://user:pass@prod-db:5432/monodog"
 DASHBOARD_URL="https://dashboard.yourcompany.com"
 BACKEND_URL="https://api.yourcompany.com"
 ```
@@ -382,13 +382,13 @@ npm install -g pm2
 pm2 start ecosystem.config.js
 
 # Using systemd
-sudo systemctl enable monovisor
-sudo systemctl start monovisor
+sudo systemctl enable monodog
+sudo systemctl start monodog
 ```
 
 ### 4. Reverse Proxy (Nginx)
 ```nginx
-# /etc/nginx/sites-available/monovisor
+# /etc/nginx/sites-available/monodog
 server {
     listen 80;
     server_name dashboard.yourcompany.com;
@@ -426,7 +426,7 @@ server {
    sudo systemctl status postgresql
    
    # Test connection
-   psql -h localhost -U monovisor -d monovisor
+   psql -h localhost -U monodog -d monodog
    ```
 
 2. **Port Already in Use**
@@ -455,9 +455,9 @@ server {
 
 ### Getting Help
 
-- Check the [GitHub Issues](https://github.com/your-username/monovisor/issues)
-- Review the [Documentation](https://monovisor.dev)
-- Join our [Discord Community](https://discord.gg/monovisor)
+- Check the [GitHub Issues](https://github.com/your-username/monodog/issues)
+- Review the [Documentation](https://monodog.dev)
+- Join our [Discord Community](https://discord.gg/monodog)
 
 ## 📈 Scaling Considerations
 

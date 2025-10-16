@@ -65,7 +65,7 @@ class MonorepoService {
   // Simulated monorepo data based on typical monorepo structure
   private mockPackages: Package[] = [
     {
-      name: "@monovisor/dashboard",
+      name: "@monodog/dashboard",
       version: "1.0.0",
       type: "app",
       status: "healthy",
@@ -73,7 +73,7 @@ class MonorepoService {
       dependencies: 12,
       maintainers: ["team-frontend"],
       tags: ["core", "ui", "application"],
-      description: "React dashboard for Monovisor monorepo management",
+      description: "React dashboard for monodog monorepo management",
       path: "apps/dashboard",
       private: false,
       scripts: {
@@ -87,7 +87,7 @@ class MonorepoService {
       devDependenciesList: ["@types/react", "@types/react-dom", "@vitejs/plugin-react", "typescript", "vite", "tailwindcss"]
     },
     {
-      name: "@monovisor/backend",
+      name: "@monodog/backend",
       version: "1.0.0",
       type: "service",
       status: "healthy",
@@ -95,7 +95,7 @@ class MonorepoService {
       dependencies: 8,
       maintainers: ["team-backend"],
       tags: ["core", "api", "service"],
-      description: "Backend API server for Monovisor monorepo dashboard",
+      description: "Backend API server for monodog monorepo dashboard",
       path: "packages/backend",
       private: false,
       scripts: {
@@ -108,7 +108,7 @@ class MonorepoService {
       devDependenciesList: ["@types/express", "@types/cors", "@types/node", "tsx", "typescript", "prisma"]
     },
     {
-      name: "@monovisor/utils",
+      name: "@monodog/utils",
       version: "1.0.0",
       type: "lib",
       status: "healthy",
@@ -116,7 +116,7 @@ class MonorepoService {
       dependencies: 3,
       maintainers: ["team-shared"],
       tags: ["shared", "utilities", "library"],
-      description: "Shared utility functions for Monovisor monorepo dashboard",
+      description: "Shared utility functions for monodog monorepo dashboard",
       path: "libs/utils",
       private: false,
       scripts: {
@@ -127,7 +127,7 @@ class MonorepoService {
       devDependenciesList: ["@types/node", "typescript"]
     },
     {
-      name: "@monovisor/monorepo-scanner",
+      name: "@monodog/monorepo-scanner",
       version: "0.2.0",
       type: "tool",
       status: "warning",
@@ -147,7 +147,7 @@ class MonorepoService {
       devDependenciesList: ["@types/node", "typescript", "jest"]
     },
     {
-      name: "@monovisor/ci-status",
+      name: "@monodog/ci-status",
       version: "0.3.1",
       type: "tool",
       status: "healthy",
@@ -309,14 +309,14 @@ class MonorepoService {
         path: "package.json",
         type: "json",
         content: JSON.stringify({
-          "name": "monovisor",
+          "name": "monodog",
           "version": "1.0.0",
           "description": "Self-hosted monorepo package manager dashboard",
           "private": true,
           "workspaces": ["apps/*", "packages/*", "libs/*"],
           "scripts": {
-            "dev": "pnpm --filter @monovisor/dashboard dev",
-            "build": "pnpm --filter @monovisor/dashboard build",
+            "dev": "pnpm --filter @monodog/dashboard dev",
+            "build": "pnpm --filter @monodog/dashboard build",
             "test": "pnpm run test --recursive"
           }
         }, null, 2),
@@ -429,8 +429,8 @@ export default {
         name: ".env.example",
         path: ".env.example",
         type: "env",
-        content: `# Environment variables for Monovisor
-DATABASE_URL=postgresql://username:password@localhost:5432/monovisor
+        content: `# Environment variables for monodog
+DATABASE_URL=postgresql://username:password@localhost:5432/monodog
 JWT_SECRET=your-jwt-secret-key-here
 API_KEY=your-api-key-here
 GITHUB_TOKEN=ghp_your-github-token-here`,
