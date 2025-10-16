@@ -1,0 +1,44 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build
+/dist/
+/build/
+/.next/
+/.turbo/
+
+# Env
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Others
+coverage/
+*.tsbuildinfo
+
+# Prisma
+prisma/dev.db
+prisma/dev.db-journal
+
+# Docker
+*.pid
+*.sock
+
+# Ignore local files
+local.settings.json
+
+# Ignore lock files (optional)
+# package-lock.json
+yarn.lock
+pnpm-lock.yaml

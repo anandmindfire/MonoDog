@@ -1,0 +1,15 @@
+{
+  "name": "@monovisor/utils",
+  "version": "1.0.0",
+  "description": "Shared utility functions for Monovisor monorepo dashboard",
+  "main": "helpers.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rm -rf dist node_modules/.cache"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.2.2"
+  }
+}
